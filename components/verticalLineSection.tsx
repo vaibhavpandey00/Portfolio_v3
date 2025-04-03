@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
+import { motion } from "framer-motion";
 
 const VerticalLeftContactSection = () => {
   const socialLinks = [
@@ -60,7 +62,12 @@ const VerticalLeftContactSection = () => {
   ];
 
   return (
-    <div className="hidden md:flex flex-col text-sm justify-end items-center gap-6 bg-transparent m-10 h-screen">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
+      className="hidden md:flex flex-col text-sm justify-end items-center gap-6 bg-transparent m-10 h-screen"
+    >
       {socialLinks.map((social, index) => (
         <Link
           key={index}
@@ -74,13 +81,17 @@ const VerticalLeftContactSection = () => {
 
       {/* Vertical line */}
       <div className="w-px h-32 bg-[#8892b0]"></div>
-    </div>
+    </motion.div>
   );
 };
 
 export const VerticalRightContactSection = () => {
   return (
-    <div className="hidden md:flex flex-col justify-end items-center w-[100px] gap-6 h-screen">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
+      className="hidden md:flex flex-col justify-end items-center w-[100px] gap-6 h-screen">
       {/* Rotate this p tag 90 degrees clockwise */}
       <p className="font-robotoMono text-[#8892b0] text-base rotate-90 mb-32 hover:text-[#64ffda] hover:-translate-y-1 duration-300 lg:cursor-pointer">
         <a href="mailto:vaibhav.pandey0798@gamil.com">vaibhav.pandey0798@gamil.com</a>
@@ -88,7 +99,7 @@ export const VerticalRightContactSection = () => {
 
       {/* Vertical line */}
       <div className="w-px h-28 bg-[#8892b0]"></div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -22,17 +22,19 @@ export const FloatingDock = ({
     items,
     desktopClassName,
     mobileClassName,
+    isPulse
 }: {
     items: { title: string; icon: React.ReactNode; href: string }[];
     desktopClassName?: string;
     mobileClassName?: string;
+    isPulse?: boolean
 }) => {
     return (
         <>
             <div className="fixed bottom-0 left-0 w-full mb-4">
                 <div className="flex justify-center items-center">
                     <FloatingDockDesktop items={items} className={desktopClassName} />
-                    <FloatingDockMobile items={items} className={mobileClassName} />
+                    <FloatingDockMobile items={items} className={mobileClassName} isPulse={isPulse} />
                 </div>
 
             </div>
@@ -43,9 +45,11 @@ export const FloatingDock = ({
 const FloatingDockMobile = ({
     items,
     className,
+    isPulse
 }: {
     items: { title: string; icon: React.ReactNode; href: string }[];
     className?: string;
+    isPulse?: boolean
 }) => {
     const [ open, setOpen ] = useState(false);
     return (
@@ -86,9 +90,11 @@ const FloatingDockMobile = ({
                         </motion.div>
                     )}
                 </AnimatePresence>
+                {/* If isPulse is true, add the pulse animation on the button */}
+                {isPulse && <div className="absolute bottom-0 right-0 w-12 h-12 rounded-full bg-[#64ffda] animate-ping" />}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="h-12 w-12 rounded-full glassmorphism !bg-slate-200 flex items-center justify-center"
+                    className="h-12 w-12 rounded-full glassmorphism !bg-slate-200 flex items-center justify-center "
                 >
                     <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-800" />
                 </button>

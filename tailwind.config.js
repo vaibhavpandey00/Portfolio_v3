@@ -56,6 +56,41 @@ module.exports = {
         '.glassmorphism-hover:hover': {
           'transform': 'scale(1.05)',
           'background': 'rgba(255, 255, 255, 0.15)',
+        },
+        // No scrollbar
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none',
+        },
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+        // Custom grid css for each grid block
+        '.grid-block': {
+          'border': '1px solid rgba(255, 255, 255, 0.1)',
+          'width': '100%',
+          'height': '100%',
+          'display': 'flex',
+          'flex-direction': 'column',
+          'justify-content': 'center',
+          'align-items': 'center',
+          'padding': '10px',
+        },
+        '.grid-block-items': {
+          'display': 'flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'gap': '10px',
+        },
+        // Tools div styling
+        '.tool': {
+          'display': 'flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'gap': '10px',
+          'padding': '10px',
+          'border': '1px solid rgba(255, 255, 255, 0.2)',
+          'border-radius': '10px',
         }
       };
 

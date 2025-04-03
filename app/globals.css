@@ -6,4 +6,35 @@ body {
     /* background: #1f2028; */
     background: #0a192f;
     color: #ffffff;
+    cursor: none;
+}
+
+input, textarea {
+    cursor: none; /* Hides cursor inside text fields */
+  }
+  
+
+/* Custom cursor */
+.custom-cursor {
+    width: 18px;
+    /* Cursor size */
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    /* Make it circular */
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 1);
+    /* 3D shadow effect */
+    pointer-events: none;
+    /* Prevent interference with clicking */
+    transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+    /* Smooth transition */
+    z-index: 9999;
+}
+
+/* Click effect (shrinks when clicked) */
+.custom-cursor:active {
+    width: 8px;
+    height: 8px;
 }
