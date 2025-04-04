@@ -15,7 +15,6 @@ import { SiMongodb } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { SiPostman } from "react-icons/si";
 import Image from "next/image";
-import MyToolDiv from "./myToolDiv";
 import BeyondCodingSection from "./BeyondCodingSection";
 
 interface Tool {
@@ -136,7 +135,7 @@ export const LayoutGrid = () => {
                                 x: containerWidth > 0 ? [ 0, -containerWidth * 2 ] : [ 0, -1000 ]
                             }}
                             transition={{
-                                duration: 20,
+                                duration: 45,
                                 ease: "linear",
                                 repeat: Infinity,
                                 repeatType: "loop",
@@ -162,7 +161,7 @@ export const LayoutGrid = () => {
                                 x: containerWidth > 0 ? [ -containerWidth * 2, 0 ] : [ -1000, 0 ]
                             }}
                             transition={{
-                                duration: 25,
+                                duration: 40,
                                 ease: "linear",
                                 repeat: Infinity,
                                 repeatType: "loop",

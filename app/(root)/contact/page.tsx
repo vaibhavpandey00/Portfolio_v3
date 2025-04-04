@@ -30,10 +30,18 @@ const page = () => {
 
         {/* Social Media Section */}
         <div className="flex md:flex-col justify-center items-center gap-10 md:gap-12 w-full h-16 md:h-4/6 md:w-20 rounded-2xl glassmorphism ">
-            <MdEmail className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
-            <FaLinkedin className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
-            <FaGithub className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
-            <IoLogoInstagram className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
+            <a href="mailto:vaibhav.pandey0798@gmail.com" className="">
+                <MdEmail className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
+            </a>
+            <a href="https://www.linkedin.com/in/vaibhavpandey0" className="">
+                <FaLinkedin className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
+            </a>
+            <a href="https://www.github.com/vaibhavpandey00" className="">
+                <FaGithub className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
+            </a>
+            <a href="https://www.instagram.com/vaibhavpandey0" className="">
+                <IoLogoInstagram className="text-4xl lg:cursor-pointer lg:hover:text-[#64ffda] hover:-translate-y-2 duration-300" />
+            </a>
         </div>
 
         {/* Lottie Contact me SVG */}
