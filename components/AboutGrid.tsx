@@ -104,7 +104,12 @@ export const LayoutGrid = () => {
     return (
         <div className="w-full h-full p-7 overflow-scroll no-scrollbar grid sm:grid-cols-3 sm:grid-rows-8 gap-4">
             {/* My Reads */}
-            <div className="grid-block glassmorphism !h-[20rem] md:!h-full sm:row-span-4 rounded-3xl">
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+
+            className="grid-block glassmorphism !h-[20rem] md:!h-full sm:row-span-4 rounded-3xl">
                 <div className="grid-block-items w-full h-1/6 text-accent text-xl font-semibold">
                     <FaStar />
                     <h2 className="">My Reads</h2>
@@ -115,10 +120,14 @@ export const LayoutGrid = () => {
                 <div className="w-full h-4/6 flex items-center justify-center overflow-hidden">
                     <img src="/book.png" alt="Dopamin Detox" className="h-full" />
                 </div>
-            </div>
+            </motion.div>
 
             {/* My Tools */}
-            <div ref={toolsContainerRef} className="grid-block glassmorphism !h-[20rem] md:!h-full sm:col-span-2 sm:row-span-4 rounded-3xl">
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+            ref={toolsContainerRef} className="grid-block glassmorphism !h-[20rem] md:!h-full sm:col-span-2 sm:row-span-4 rounded-3xl">
                 <div className="grid-block-items w-full h-1/6 text-accent text-xl font-semibold">
                     <FaTools />
                     <h2 className="">My Tools</h2>
@@ -179,18 +188,26 @@ export const LayoutGrid = () => {
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Beyond Coding */}
-            <div className="grid-block glassmorphism !h-[20rem] md:!h-full sm:col-span-2 sm:row-span-4 sm:row-start-5 rounded-3xl">
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+            className="grid-block glassmorphism !h-[20rem] md:!h-full sm:col-span-2 sm:row-span-4 sm:row-start-5 rounded-3xl">
                 <BeyondCodingSection />
-            </div>
+            </motion.div>
 
             {/* Map */}
-            <div className="flex justify-center items-center relative !h-[20rem] md:!h-full sm:row-span-4 sm:col-start-3 sm:row-start-5">
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
+            className="flex justify-center items-center relative !h-[20rem] md:!h-full sm:row-span-4 sm:col-start-3 sm:row-start-5">
                 <Image src={mapImage} alt="Map location" width={600} height={600} className="w-full h-full rounded-3xl" />
                 <img src="/person.png" alt="Me" className="absolute z-99 h-14 rounded-full" />
-            </div>
+            </motion.div>
         </div>
     );
 };

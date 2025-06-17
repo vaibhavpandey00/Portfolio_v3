@@ -1,3 +1,4 @@
+"use client";
 import { LayoutGrid } from "@/components/AboutGrid";
 
 const page = () => {

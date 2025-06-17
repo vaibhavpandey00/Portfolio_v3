@@ -64,7 +64,9 @@ const Hero = ({ resumeUrl }: { resumeUrl: string }) => {
         className="mt-5"
       >
         <div className="flex justify-center items-center h-12 w-32 border-2 rounded-md border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-black hover:font-semibold cursor-pointer transition duration-300">
-          <a href={resumeUrl} download="Vaibhav_Pandey_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={resumeUrl} download="Vaibhav_Pandey_Resume.pdf" target="_blank" rel="noopener noreferrer"
+          className="h-full w-full flex justify-center items-center"
+          >
             Resume
           </a>
         </div>
