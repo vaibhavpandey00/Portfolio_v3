@@ -1,7 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
 import { FloatingDock } from "@/components/floating-dock"
-import Preloader from "@/components/preloader";
 import { motion } from "framer-motion";
 import CustomCursor from "@/components/customCursor";
 import { usePathname } from "next/navigation";
@@ -9,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { IconAddressBook, IconDeviceProjector, IconHome, IconUser } from "@tabler/icons-react";
 import React from "react";
 
-const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     const links = [
         {
             title: "Home",
@@ -18,7 +16,6 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
             ),
             href: "/",
         },
-
         {
             title: "About",
             icon: (
@@ -44,10 +41,7 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 
     const isPulse: boolean = usePathname() === "/";
 
-    const [ isLoaded, setIsLoaded ] = useState(false);
     return <>
-        {/* {!isLoaded && <Preloader onComplete={() => setIsLoaded(true)} />}
-        {isLoaded && <></>} */}
         <CustomCursor />
         <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -69,4 +63,4 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     </>
 }
 
-export default layout
+export default Layout

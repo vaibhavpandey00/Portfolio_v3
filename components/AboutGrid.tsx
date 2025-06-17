@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { FaStar } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
-import { IoGameController } from "react-icons/io5";
 import { TbBrandJavascript } from "react-icons/tb";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa6";

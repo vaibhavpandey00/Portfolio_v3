@@ -44,7 +44,7 @@ const Hero = ({ resumeUrl }: { resumeUrl: string }) => {
         transition={{ duration: 0.8, delay: 1.6, ease: "easeOut" }}
         className="font-inter md:w-3/5 mt-3 text-[#8892b0]"
       >
-        I'm a Full Stack Web Developer with a passion for creating innovative and user-friendly web applications.
+        I&apos;m a Full Stack Web Developer with a passion for creating innovative and user-friendly web applications.
         I have experience in building applications using React, Next.js, and Node.js.
         Currently working as a Software Engineer Intern at{" "}
         <a
