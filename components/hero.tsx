@@ -46,7 +46,7 @@ const Hero = ({ resumeUrl }: { resumeUrl: string }) => {
       >
         I&apos;m a Full Stack Web Developer with a passion for creating innovative and user-friendly web applications.
         I have experience in building applications using React, Next.js, and Node.js.
-        Currently working as a Software Engineer Intern at{" "}
+        Currently working as a Software Developer at{" "}
         <a
           href="https://www.propero.in"
           target="_blank"
